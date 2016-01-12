@@ -544,3 +544,69 @@ particular, a ranker does not assume a particular score threshold for separating
 positives from negatives. A ranking is defined as a total order on a set of
 instances, possibly with ties.
 ** DONE 1h python tutorial revisit
+* <2016-01-13 Wed>
+** DONE 1h emacs tutorial
+C-x C-b: ibuffer mode (need to replace list-buffer with ibuffer first)
+    / : start a fillter:
+        m: filter by mode
+        g: (after filter) create a group for current filter criteria
+    o, C-o: open buffer in a seperate window
+    RET: open buffer
+    =: diff buffer with corresponding file
+
+You can also mark a buffer by pressing m on multiple entries to perform various
+operations:
+
+view: press A to view the marked buffers
+save: press S to save the marked buffers
+close: press D to close the marked buffers
+revert: press V to discard changes to the marked buffers
+To unmark a buffer, press u on the marked entries.
+
+Another way to open the buffer: e (enter), f (find) or RET to bury and replace
+the list with selected buffer. Switch back to the list using C-x C-b again.  To
+sum up, I will list the key bindings your used in this section along with other
+useful key bindings:
+
+C-x C-b to open ibuffer.
+o or C-o to open a buffer at point.
+e, f or RET bury the buffer list and replace it with the buffer content.
+= to compare the current buffer content with its file.
+
+Tip: When point is on an entry, C-x C-f starts at the current directory of
+buffer of that entry.
+
+Filtering commands:
+Key	Bindings
+/ m	Add a filter by a major mode
+/ n	Add a filter by buffer name.
+/ c	Add a filter by buffer content.
+/ f	Add a filter by filename
+/ >	Add a filter by buffer size
+/ <	Add a filter by buffer size
+/ /	Remove all filters in effect
+Filter group commands:
+Key	Bindings
+/ g	Create a filter group from filters
+TAB	Move to next filter group
+M-p	Move to previous filter group
+/ \	Remove all active filter groups
+/ S	Save the current groups with a name
+/ R	Restore previously saved groups
+/ X	Delete previously saved groups
+Sorting commands:
+Key	Bindings
+,	Rotate between sorting modes
+s i	Reverse current sorting order
+s a	Sort buffers by alphabet
+s f	Sort buffers by filename
+s v	Sort buffers by last viewing time
+s s	Sort buffers by size
+s m	Sort buffers by major modes
+To quit ibuffer, press q.
+** TODO Medical verify for Intel internship
+** TODO 1h fundamental reading
+** TODO 1h cuda doc reading
+** TODO 1h pcl thesis reading
+** TODO 1h python book reading
+** TODO Remainning time goes to ML reading
