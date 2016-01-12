@@ -1,0 +1,546 @@
+DIARY FOR <2016-01>
+
+* <2016-01-04 Mon>
+** emacs learning
+*** powerful command: dired
+file manager mode, type 'M-x dired' to enter this mode
+you could then C-x C-q (or M-x wdired-change-to-wdired-mode) switches to Editable Dired.
+In which case you could edit it, and type 'C-c C-c' to commit 'C-c Esc' to abort.
+*** Basic moving commands
+C-f	Forward one character
+C-n	Next line
+C-b	Back one character
+C-p	Previous line
+Here are some ways to move around in larger increments:
+C-a	Beginning of line
+M-f	Forward one word
+M-a	Previous sentence
+M-v	Previous screen
+M-<	Beginning of buffer
+C-e	End of line
+M-b	Back one word
+M-e	Next sentence
+C-v	Next screen
+M->	End of buffer
+*** other useful commands
+M-num / C-u num: repeat num times (not for C-v M-v)
+C-g: give up current command
+C-x 1: close other windows ( many commands start with C-x, they
+		usualy relate to frame, file, buffer)
+C-k / M-k: kill to line end / line start
+C-<SPC> / C-@: set mark (C-@ is for chinese users)
+C-w: cut
+C-y: yank last
+M-y: yank even former(can be hit multiple times)
+C-/: undo('C-x u' will do the same thing)
+C-x C-b: list buffer
+C-x C-f: find (create new) file
+C-x C-s: save current file
+C-x s: save all buffer
+C-x b: go to buffer
+M-x recover-file:...
+M-x auto-fill-mode: use 'C-x f num' to set fill size
+M-q: manual fill
+C-s / C-r: search / reversed search (use 'C-g' to give up and return to 
+	location before search started)
+
+        ref:[1]http://www.gnu.org/software/emacs/tour/
+	[2]http://www.emacswiki.org/emacs/EmacsNewbie
+	[3]emacs tutorial
+* <2016-01-05 Tue>
+** emacs learning
+*** pretty good color-theme with black / dark background:
+    color-theme-comidia
+    color-theme-dark-blue2
+    color-theme-ld-dark
+    color-theme-taming-mr-arneson
+    color-theme-dark-laptop
+    color-theme-midnight
+*** pretty good color-theme with light background:
+    color-theme-emacs-nw
+    color-theme-info-doc
+    color-theme-xp    
+    color-theme-bharadwaj
+    color-theme-snowwish
+    color-theme-whateveryouwant
+    color-theme-blippblopp
+    color-theme-vim-color
+* <2016-01-06 Wed>
+** DONE compile the code of 'spaint'
+** DONE briefly read the paper related to 'spaint'
+** DONE complete 3rd chap of pytqt
+** DONE wash the experimental car of our group
+   must be done in the morning
+** DONE attend the interview hold by Intel
+   addr: 科学院南路2号，融科资讯中心A座8层
+   time: 2:00pm
+** TODO try to read more papers about 'spaint'
+** TODO spend some time with XIAO FAN
+   she don't have time:(
+** TODO translate 2 pages of 'Mobile Robotics'
+   2 pages are too much too be done, it requires more than 2
+   hours. finished about half a page
+** unintended tasks finished:
+*** configured WebDAV for lab computer
+    ref: https://wiki.archlinux.org/index.php/WebDAV
+*** configured basic cygwin environment
+    note there is mirror on tuna.tsinghua
+** reasons for not completing sth
+   wasting some time on configuring windows10 cygwin environment,
+   completely not necessory to make all platform having an full
+   fledged editing/ development environment
+* <2016-01-07 Thu>
+** DONE 1h+ pyqt
+   big difference between Qt5 and Qt4: QtGui had splited into several
+   independent packages. most noticably one is QtWidgets, which
+   contains QApplication and all graphical widgets.  to find out which
+   class belongs to which module in pyqt5, you could consult qt5's
+   document, on top of the document, there is a 'MODULE->C++
+   Class->CLASS', that's what you want.  IMPORTANT: pyqt4 and pyqt5
+   are very different! so I might not continue reading that book on
+   pyqt4 from Mark Summerfield. At least, I should read official pyqt5
+   doc first, then come back to Mark's book.
+   I spent almost 2 and a half hours on it!
+** DONE 1h+ tanslation
+finished about 1 page
+** DONE 1h+ reading source code of spaint
+1. the main part of this project is 'module', 'app' and 'test' as not
+   that important.
+2. the 'cmake' directory served as two purpose: one is finding
+   required libraries, which by default are self-contained libs that
+   come with git clone, not the system wide libraries. The second
+   purpose is to customize cmake build process.
+3. Compiler this source on computers with Nvdia/AMD graphic cards, or
+   you might couldn't get error(s).
+*** the 'rigging' module (directory under 'module')
+1. this will compile into one library target, which will be installed
+   in 'lib' folder.
+2. main purpose of the module is to provide classes to represent
+   camera(s) in space. cameras have properties such as position,
+   orientation, and the abilities to move in various direction. for
+   camera systems, there is a main camera, then a secondary or more
+   cameras that are still relative to the main camera.
+*** the 'spaint' module
+1. It offer option 'low power mode', which seems like a compiler flag.
+2. It require lots of libraries, which were stated on the project's
+   readme file.
+3. the 'touch' part is of interest for us. it's only available when
+   WITH_FIRE_ARRAY enabled.
+4. everytime compile into a library target, named 'spaint'
+*** the 'tvginput' module
+1. It seems designed for maintains the keyboard and mouse
+   state/interaction(?) withuser.
+*** the 'tvgutils' module
+1. Seems like designed for user keyboard/mouse interactions.
+*** the 'rafl' module
+1. 'rafl' seem like the abbr. for 'RAndom Forest Learning'. It might
+   be the main source code for random forest learning algorithms.
+** DONE 1h+ reading fundamental books
+   the most important rule of probability: central limit theorem
+   (CLT). as a rule of thumb: when n > 30, CLT could be used. if the
+   population distribution is normal, this number could be smaller. as
+   for Bernoulli distribution. when np >= 10 and n(1-p) >= 10, CLT is
+   justified to be used. as a corollary, when n is sufficiently large,
+   Y = X1 * X2 * ... * Xn is a lognormal distributed random variable.
+** DONE 1h+ reading machine learning
+*** chap01
+    section 1.1 Tasks: the problems can be solved with machine
+    learning
+1. three keywords about ML: feature, model, task
+2. matrix decomposition is useful about revealing hidden/latent
+   variables/relations
+3. distinction:
+   supervised learning <-> unsupervised learning : learning from 
+   labeled/unlabeled data.
+   predictive model <-> descriptive model : model output involves 
+   the target variable or not.
+4. for supervised learning, accuracy couldn't indicate overfitting, so
+   we need test set. but what if test set happen to have very
+   different distribution from traning set? so we invite cross
+   validation. for example, randomly divide datum into 10 groups. each
+   time 1 group is served as test set, others as tranning set. we do
+   it 10 times, with each group act as test set in turn. we then
+   verify the mean and variance of the 10 results, evaluate it's
+   performance. by this mean, we could get much more reliable results.
+** DONE 1h+ writing source code for hdl calibration
+checked many library, libpcap for c++, python-pcaplib for python. but
+python lib seemed sould only read pcapng file, might need to find a
+alternate for pcap file.
+* <2016-01-08 Fri>
+** DONE read 1h+ ML book
+1. There are 3 main group of ML model: geometric, probabilistic, and
+   logical model.
+*** geometric model
+1. using geometric concepts such as lines, planes and distances. one
+   main advantage of geometric classifiers is that they are easy to
+   visualise, as long as we keep to two or three dimensions. But in
+   practice, there can be very high dimension.
+2. in this model, distances are one of the most important features to
+   classify/cluster instances.
+3. what's homogeneous coordinate: the addtion of an extra dimension
+   set to 1.
+*** probabilistic model
+1. very important concepts: priori, posteriori, likelihood.
+2. The difference between 'Max A Posteriori'(MAP) and 'Maximum
+   likelihood' (ML) is that when we assume that priori for different
+   classes are equal (they are the same, a.k.a. with uniform
+   distribution), then MAP reduce to ML. The basis of this idea is:
+   Posteriori = likelihood * priori / (observed values). In practice,
+   since observed values is known, when don't concern about it, so
+   arg(posteriori) = arg(likelihood * priori).
+3. naive Bayes is a good start point of problem solving. naive means
+   we assume features and classes are independent from each other.
+
+** DONE read Kinect in Action, 1h+
+read: Introduction & Hardware Architecture
+spent about 2h+
+** DONE generate a map of Future Challenge 2015, for viusal presentation
+needed by TTT
+** DONE read source code of spaint, 1h
+*** module infermous
+It is primarily designed as the inference engine. especially the CDF -
+Conditonal Random Field.
+*** 2 modules related to 'evaluation'
+these 2 modules are for evaluate performance of the system.
+*** module spaint revisited
+1. This is the main module of the whole project. Its task atleast (but
+   not most) including: >>> reading images/video streams from cameras,
+   and reconstruct the 3D environment. The reconstructing is attained
+   by utilising a seperate library called InfiniTAM.
+**** the 'imageprocessing' sub-module
+It serve only one purpose: handling basic image processing tasks by
+CPU or by CUDA (and also ArrayFire, which could also handle OpenCL
+for AMD graphic cards).
+It's fundamental code base for other functionalities.
+**** the 'touch' sub-module
+deals with user's interactive touches.
+**** the 'features' sub-module
+mostly the VOPFeatureCalculator class for CPUs and GPUs.
+**** the 'util' sub-module
+It contains one of the most important struct: SpaintVoxel, and many
+utility structs with static function for following purposes:
+1. CameraPoseConverter
+2. ColourConversion
+3. LabelManager
+4. MemoryBlockFactory
+5. RGBDUtil: transform between depth and RGB cameras.
+**** other sub-modules
+everything else in this module are simple and straight forward by
+their names.
+** TODO 1h translation
+** TODO fundamental book reading, 1h
+** DONE write code for HDL calibration, 1h
+Tried to compile VeloView on Arch Linux, after manually altered the
+python from version 3 to version 2, compilation succeeded, but seemed
+not working very well. Will try to find out more.
+
+* <2016-01-09 Sat>
+** DONE 1h+ fundamental reading
+1. always shoose an unbiased estimator when possible. alway shoose a
+   minimum variace unbiased estimator (MVUE) when possible.
+2. for normal distribution, sample average is the MVUE for mean.
+3. sample average is not always the MVUE for mean. notably, for Cauchy
+   distribution, midian is a good estimater, while sample average and
+   extreme values average ( (min + max) / 2) are terrible
+   estimator. for uniform distribution, the best estimator is extreme
+   value average.
+4. For most distribution, trimmed mean works reasonably well, although
+   it might not be the best. In practice, a trimming proportion of 10%
+   or 20% is almost always good. so it's called 'robust estimator'.
+** DONE 1h+ machine learning reading
+*** the logical model
+1. the leaves of the logical tree could be a class label, probability,
+   real value, etc. when it's a class label, then the tree is usually
+   called decision tree.
+2. logical model could be easily described as 'if...then...' clauses.
+3. when expressed as rules, it's important to note that there might be
+   inconsistent and incomplete rules, which we should handle with
+   care. such as defining default rules.
+4. logical model could be easily read by human, that's why it's also
+   called declarative model.
+5. rules do not need to be restricted to certain set. it could be
+   expanded by learning algorithms.
+*** grouping and grading
+personal impression about these two: grouping is like classification
+(assigning class labels, so it's finite in nature), while grading is
+like regression (assigning real values to instances, so it's infinite
+in nature).
+** DONE 1h+ InfiniTAM source code reading
+the source code could not pass cmake if on a computer without nVdia
+graphic card. but with cuda installed, you could trick cmake by
+manually set 'CUDA_ARCH' to 'sm_10'
+
+there are a lot to go from now. I need to read many papers on
+KinectFusion, and other concepts on computer vision.
+
+For open source 'KinectFusion' like project, InfiniTAM seemed to be
+the best one. Other choices include: kinfu from pcl, siftfu from
+princeton vision group. kinfu handles dense voxel (same as
+KinectFusion), it could not handle loose data. siftfu seemed to be a
+testing project wretten with matlab, should be considered last.
+
+According to the video of kinfu (date back to 2012) the performance is
+not very charming. relative slow and accuracy is not as good as
+KinectFusion. InfiniTAM also suffer from accuracy issues.
+** DONE 1h+ Kinect in Action reading
+** DONE 1h+ pyqt doc reading
+the pyqt doc is more like a reference manual, not very suited for
+beginners use as a tutorial. so i'm gonna find some other sources for
+pyqt5 learning.
+** DONE revisit python tutorial for unfamiliar concepts
+read 1 - 4 section
+** TODO 1h+ writing codes for parsing pcapng hdl packets
+** DONE housekeeping: wash closes and socks
+* <2016-01-10 Sun>
+** DONE 1h fundamental book reading
+two constructive method to obtain point estimator: the method of
+moments, and the maximum likelihood estimation. the former sometimes
+require less computation, while the other bear some efficiency
+properties: when the sample size n is large, MLE of any parameter is
+approximately unbiased and has variance that is nearly as small as can
+be achieved by any estimator. Stated another way, the MLE is
+approximately the MVUE of parameters.
+
+However, the MLE method require we know the underlying distribution of
+population. When this distribution is unknown, the best way is to use
+a robust estimator, like the previously mentioned 10% or 20% trimmed
+mean.
+
+There is another robust estimator - M-estimator. It's the
+generalization of MLE, instead of maximizing the product (joint pdf),
+one could maximizing the sum. more detail see book of David Hoaglin et
+al. (Understanding Robust and Exploratory Data Analysis)
+
+CHAP07 Statistical Intervals
+concept: interval of plausible value - an interval estimate or
+confidence interval (CI). A confidence level need be set before hand.
+** DONE 1h ML book reading
+Two use of features:
+features as splits, and features as predictors
+
+KERNEL: A function that calculates the dot product in feature space
+directly from the vectors in the original space is called a kernel.
+
+I STILL DON'T QUITE UNDERSTAND THE KERNEL FUNCTION!!!:(
+
+Here is something comes from Radu B. Rusu's Ph.D thesis: 
+
+The term k ( x i , x j ) is a kernel function which maps the linear
+non-separable data to a higher dimension where a linear separation by
+a hyperplane is possible. Any function that satisfies the following
+conditions can be a kernel:
+1. the function k has to be symmetric: k ( x i , x j ) = k ( x j , x i ) ;
+2. the kernel matrix K i,j = k ( x i , x j ) needs to be positive
+   semi-definite for all points x.
+
+*** Concept: generative models vs. discriminative models
+This two definition is cited from Radu B. Rusu's thesis.
+
+generative models, which model the distributions of input variables x
+and output vari- ables y. The models are called generative, because
+they have the ability to both infer from the input variables to the
+output class and create values for the input space by sam- pling over
+the output. Generative models need to model the joint distribution p (
+x, y ) ;
+
+discriminative models, which only model the conditional probability
+distribution p ( y | x ) by inferring over the input variables x
+(called observations), according to the classifier characteristics of
+this approach. Each new observation x gets assigned to a class y.
+
+
+CHAP02 starts from here
+Three spaces: input space, output space, label space.
+Two sets: trainning set, test set
+Two maps (functions): 
+1. model: input space -> output space
+2. labeling function: trainning set -> label space
+
+label space and output space coinside sometimes (like in:
+Classification, Regression), or differ (like in: scoring, ranking,
+probability estimation).
+
+*** Concept: relation
+A (binary) relation is a set of pairs R ⊆ A × B for some sets A and B
+; if A = B we say the relation is over A. Instead of (x, y) ∈ R we
+also write xR y. A relation over A is: 
+
+(i) reflexive if xRx for all x ∈ A
+(ii) symmetric if xR y implies yRx for all x, y ∈ A;
+(iii) antisymmetric if xR y and yR x implies x = y for all x, y ∈ A
+(iv) transitive if xR y and yRz implies xR z for all x, y, z ∈ A
+(v) total if xR y or yRx for all x, y ∈ A.
+
+A partial order is a binary relation that is reflexive, antisymmetric
+and transitive. For instance, the subset relation ⊆ is a partial
+order. 
+
+A total order is a binary relation that is total (hence reflexive),
+antisymmetric and transitive. The ≤ relation on real numbers is a
+total order.
+
+If xR y or yRx we say that x and y are comparable; otherwise they are
+incomparable.
+
+An equivalence relation is a binary relation ≡ that is reflexive,
+symmetric and transitive. The equivalence class of x is [x] = {y|x ≡
+y}. For example, the binary re- lation ‘contains the same number of
+elements as’ over any set is an equivalence relation.  Any two
+equivalence classes are disjoint, and the union of all equivalence
+classes is the whole set – in other words, the set of all equivalence
+classes forms a partition of the set.
+
+*** CHAP02
+Binary classification: two-class classification, also called concept
+learning.
+
+Contingency table / Confusion matrix
+from this table / matrix, we could get:
+1. Accurary: the proportion of correctly classified test instances.
+2. Error rate: the proportion of in-correctly classified test
+   instances. It equals to (1 - accuracy).
+3. True positive, true negative, false positive, false
+   negative. 'true' or 'false' represent the correctness of
+   prediction. While 'positive' or 'negative' represent the prediction
+   itself. True positive rate often called 'sensitivity', True
+   negative rate often called 'specificity'. The two could reveal a
+   per-class accurary.
+
+Preision: while true positive rate is the proportion of predicted
+positives among the actual positives, precision is the proportion of
+actual positives among the predicted positives. It is useful when the
+minority class is the class of interest and very small.
+** DONE 1h python tutorial revisit
+finished section 7. file io
+** DONE 1h pcl book reading
+** DONE 1h cuda doc reading
+Just familiar yourself with gpu programming.
+** TODO InfiniTAM, KinectFusion papers & code reading
+* <2016-01-11 Mon>
+** DONE 1h fundamental book reading
+** DONE 1h python tutorial revisit
+for pretty print:                                                               
+import pprint                                                                   
+pprint.pprint(...) 
+
+file io:
+import pickle
+pickle.dump(...) #works for built-in types
+x = pickle.load(...)
+
+iterate through file system:
+import glob
+for filename in glob.glob(path)
+
+file io - option 2:
+unlike pickle io file as byte, shelve io file as dictionary. and
+shelve need shelve.open/close by itself. you just read / write the
+variables, no need explicitly call read() or write(). It's almost the
+offline mode of dictionary.
+shelve is back-ended by pickle. It'll create 2 file and 1 dir
+automatically, modify them outside shelve. open/close does not require
+file extension.
+** TODO 1h pcl thesis reading
+** DONE 1h cuda doc reading
+At its core are three key abstractions - a hierarchy of thread groups,
+shared memories, and barrier synchronization - that are simply exposed
+to the programmer as a minimal set of language extensions.
+
+Three kind of parallel:
+thread parallel, data parallel, task parallel
+
+simplified workflow: problem to solve is divided into blocks of
+threads, each block is assigned to a steram multiprocessor (SM), and
+could contain multiple threads.
+
+blocks are then organized into grid. both blocks and grid could be
+one, two, or three dimensional.
+
+memory model - three levels:
+per-thread local memory, per-block shared momory, global memory.
+there is also two read only momery visible to all threads: the
+constant and texture memory.
+** TODO all remaining time belongs to ML reading!
+** DONE install an arch linux on the 160G hard disk, with cuda
+a good late night reading emacs stuffs, learned a lot!
+<2016-01-12 Tue>
+* <2016-01-12 Tue>
+** DONE 1h emacs tutorial
+the final aim: mainly solve two problems: jumping, compiling c++ codes
+
+useful command:
+M-x ffap: find-file-at-point
+C-<number> C-y: yank the <number>th kill content
+
+C-SPC C-SPC: set-unset a mark (on some intersting point you might revisit in
+future, this could be done repeatedly hit C-u C-SPC). When you yank, you create
+a mark at point before the new content is inserted. After the content is
+inserted, point moves according to the size of the content. In general, most
+Emacs commands that create sudden displacement push marks, so you can go back to
+previous locations without having to tediously scroll the whole buffer. Method
+to go back: C-u C-SPC or C-x C-x. The later one is much more
+convineant. Remember when you have to highlight a big region and for some
+reason, you lose the highlighting and have to do it all over again. C-x C-x
+saves you from that tedium.
+
+C-x C-SPC: Global mark ring is like mark ring, but they persist across
+buffers. Each time you set a mark, that mark is set in global mark ring in
+addition to the buffer's mark ring.
+
+C-/: undo. to redo, take any other actions, then undo, this in effect undoed
+fomer undos! Real tricky...
+
+(under interactive search) C-s C-w: search word behind current point. C-w could
+be repeat to select more words. This concept works for C-r of course.
+
+C-u C-s: search with regexp
+
+M-s family:
+    M-s .: search current symbol at point. Basically same as 'M-b C-s C-w RET'
+    M-s o: find occurrence
+           To browse through the find result list, M-g (M-)p to previous, 'n' is
+           to next of course. C-x z to repeat previous command (z could repeat
+           again and again. But I don't quite understand...)
+    M-s h .: highlight symbol at point
+    M-s h l: highlight lines that match a regexp
+    M-s h r: highlight matching regexp
+    M-s h u: unhighlight a regexp
+** DONE 1h fundamental book reading
+** DONE 1h pcl thesis reading
+** DONE 1h cuda doc reading
+** TODO all remaining time belongs to ML reading!
+In a coverage plot, classifiers with the same accuracy are connected by line
+segments with slope 1
+
+n a normalised coverage plot, line segments with slope 1 connect classifiers
+with the same average recall.
+
+recall is just a different name for true positive rate; negative recall is then
+the same as the true negative rate, and average recall is the average of
+positive recall (or true positive rate) and negative recall (or true negative
+rate). It is sometimes called macro-averaged accuracy.
+
+Broadly speaking, you should use a coverage plot if you explicitly want to take
+the class distribution into account, for instance when you are working with a
+single data set. An ROC plot is useful if you want to combine results from
+different data sets with different class distributions.
+
+*** Scoring and ranking
+loss function: We would like to reward large positive margins, and penalise
+large negative values. This is achieved by means of a so-called loss
+function. We furthermore have L(z) ≥ 1 for z < 0, and usually also 0 ≤ L(z) < 1
+for z > 0.
+
+Distinction between 'scoring' and 'regression': scoring classifier has to be
+learned from examples in the form of instances x labelled with classes c(x),
+just as a classifier. (The task where we learn a function f ˆ from examples
+labelled with true function values (x, f (x)) is called regression.
+
+Often it is more convenient to keep the order imposed by scores on a set of
+instances, but ignore their magnitudes – this has the advantage, for instance,
+of being much less sensitive to outliers. It also means that we do not have to
+make any assump- tions about the scale on which scores are expressed: in
+particular, a ranker does not assume a particular score threshold for separating
+positives from negatives. A ranking is defined as a total order on a set of
+instances, possibly with ties.
+** DONE 1h python tutorial revisit

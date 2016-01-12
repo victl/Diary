@@ -1,0 +1,83 @@
+* Thesis related
+** Map construction
+** InfiniTAM
+** SematicsPaint
+** Point Cloud Library
+** OpenCV
+* fundamental mathematical theory
+** TODO Probability and Statistics
+*** TODO <PROBABILITY AND STATISTICS>
+Sub-title: for Engineering and the Sciences
+Author: Jay L. Devore
+Edition: 5
+Started: <2015-12-01 二>
+Finished: Not yet
+**** Comments:
+** TODO Optimization
+** TODO Stochastic Process
+** TODO Linear Algebra
+** TODO Calculus
+** TODO Conbinatorial Mathematics
+** TODO Set Theory
+* fundamental computer science
+** TODO Computer Composition Principle
+** TODO Operating system
+** TODO Algorithm
+** TODO Compiler
+** TODO The art of Computer Programming
+* More specific computer science
+** TODO Machine Learning and Pattern Recognition
+*** TODO <MACHINE LEARNING>
+Sub-title: The Art and Science of Algorithms that Make Sense of Data
+Author: Peter Flach
+Edition: 1
+Started: <2016-01-01 五>
+Finished: Not yet
+**** Comment:
+** TODO Computer Vision
+** TODO Neural Network
+** TODO Big Data and Parallel Computation
+* Technical skills
+** TODO Python
+*** TODO Read through the offical tutorial
+Start: <2016-01-01 五>
+Finished: Not yet
+*** TODO <Programming Python>
+Sub-title: <None>
+Author: Mark Lutz
+Edition: 4
+Started: <2016-01-11 一>
+Finished: Not yet
+**** Comments:
+This book is incredibly long, so I might just skim through it to get
+myself familiar with python practical using. After that, this book
+shall become a reference source when needed.
+** TODO C++ (and C of course)
+*** TODO The C++ Programming Language
+*** TODO The C++ Standard Library
+*** TODO boost library
+*** DONE Qt
+** TODO Java
+** TODO The Go Programming Language
+** TODO emacs & org-mode
+** TODO Markdown & jekyll & git(hub)
+** DONE cmake
+Half done, in fact. Could read & write simple CMakeLists.txt, other
+tasks could be done by check the manual.
+
+** TODO Latex
+** TODO Unix programming
+*** TODO Shell programming
+*** TODO System programming
+*** TODO Network programming
+** TODO Mac OS X programming
+** TODO iOS programming
+** TODO Android programming
+** TODO GPU accelerated computation programming
+* History
+** TODO History of China
+** TODO World history
+* Psychology
+** TODO General Psychology
+* Economy
+* Augmented (Miscellaneous)
