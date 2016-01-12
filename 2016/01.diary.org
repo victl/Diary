@@ -508,7 +508,7 @@ M-s family:
 ** DONE 1h fundamental book reading
 ** DONE 1h pcl thesis reading
 ** DONE 1h cuda doc reading
-** TODO all remaining time belongs to ML reading!
+** DONE all remaining time belongs to ML reading!
 In a coverage plot, classifiers with the same accuracy are connected by line
 segments with slope 1
 
